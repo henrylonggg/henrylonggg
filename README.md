@@ -1,16 +1,28 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**henrylonggg/henrylonggg** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# Joseph H. Long
+### **MIS & Applied AI @ University of Delaware**
 
-Here are some ideas to get you started:
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/josephlong1118)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:henryl@udel.edu)
+[![Platform](https://img.shields.io/badge/Eval_Platform-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://getstockeval.com)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+### 🛠️ Core Stack & Infrastructure Architecture
+
+```text
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                                 FRONTEND LAYER                                   │
+│              HTML5  •  CSS3  •  JavaScript (ES6+)  •  Vercel Edge              │
+└────────────────────────────────────────┬─────────────────────────────────────────┘
+                                         │ REST APIs / JSON Payloads
+┌────────────────────────────────────────▼─────────────────────────────────────────┐
+│                                 BACKEND LAYER                                    │
+│              Node.js Runtime  •  Python Async Engine  •  Render                  │
+└────────────────────────────────────────┬─────────────────────────────────────────┘
+                                         │ Custom Query Engine / Caching
+┌────────────────────────────────────────▼─────────────────────────────────────────┐
+│                                DATA & AI ENGINE                                  │
+│             Custom SQL Database Caching Engine  •  OpenAI API                    │
+└──────────────────────────────────────────────────────────────────────────────────┘
