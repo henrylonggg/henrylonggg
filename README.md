@@ -1,7 +1,7 @@
 <div align="center">
 
-# ⚡ Joseph H. Long
-### **Data & Analytics Engineer | MIS & Applied AI @ University of Delaware**
+# Joseph H. Long
+### **B.S. MIS & Applied AI @ University of Delaware**
 
 <br/>
 
@@ -13,12 +13,12 @@
 
 ---
 
-## 📌 Executive Summary & Live Application Overview
+## Breakdown & Live Application Overview
 
-### 💡 What is **Eval**?
+### What is **Eval**?
 **Eval** ([getstockeval.com](https://getstockeval.com)) is a full-stack financial analytics platform engineered using **JavaScript (Node.js, JSX), HTML5, CSS3, SQL, and OpenAI**. Instead of forcing users to analyze overwhelming 10-K filings, balance sheets, and noisy market feeds across multiple platforms, **Eval** ingests raw fundamental SEC disclosures and technical price series to generate a single, normalized **0–99 Stock Health Score** across 40 distinct metrics.
 
-### ⚙️ Production System & Architectural Capabilities
+### Production System & Architectural Capabilities
 * **Live Serverless & Microservice Topology:** Frontend built with JSX and custom CSS hosted on the **Vercel Edge Network** for sub-100ms global delivery; backend microservices running on **Render** powered by Node.js, Express, and WebSockets.
 * **Overnight Batching & 100x Scaling:** Features an automated backend ingestion engine that fetches data for **1 stock per minute over a 10-hour overnight window** (600 stocks/night). **Reduces third-party API costs by 99% while boosting platform throughput capacity from 5 concurrent users to thousands of simultaneous sessions.**
 * **Smart Delta Caching:** Retains unchanged fundamental statement data in a relational SQL database while overwriting updated metrics. Every tracked stock is guaranteed a complete refresh at least once per week.
@@ -27,7 +27,7 @@
 
 ---
 
-## 🛠️ Stack & Codebase Architecture
+## Codebase Architecture
 
 | Architectural Layer | Target Environment | Core Technology | File Modules & Responsibilities |
 | :--- | :--- | :--- | :--- |
@@ -41,7 +41,7 @@
 
 ---
 
-## 🌐 Comprehensive Platform Modules
+## Comprehensive Platform Modules
 
 | Platform Module | Core UI Feature | Key Technical & Operational Capabilities |
 | :--- | :--- | :--- |
@@ -53,7 +53,7 @@
 
 ---
 
-## 🗄️ Database Architecture & Throughput Scaling
+## Database Architecture & Throughput Scaling
 
 Connecting client UI searches directly to third-party financial APIs restricts system capacity to roughly **5 concurrent users** before hitting rate limits or high vendor costs. **Eval** bypasses this limitation with an offline batching caching layer:
 
