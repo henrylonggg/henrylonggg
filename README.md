@@ -31,12 +31,12 @@
 
 | Architectural Layer | Target Environment | Core Technology | File Modules & Responsibilities |
 | :--- | :--- | :--- | :--- |
-| **Frontend Presentation** | Vercel Edge Serverless | JavaScript (JSX), HTML5, CSS3 | • `main.jsx`: Core UI state management, rendering, search autocompletion.<br/>• `styles.css`: Responsive layout, custom styling, dynamic score badge color styling. |
-| **Backend API Gateway** | Render Containers | Node.js Runtime, Express | • `server.js`: REST API routing, request validation, CORS management.<br/>• `index.js`: Main backend entry point & microservice orchestration. |
-| **Real-Time Streaming** | Render Containers | Node.js, WebSockets | • `websock.js`: WebSocket communication layer for real-time client metric updates and live data feeds. |
-| **Scoring Algorithm** | Node.js Server Runtime | JavaScript | • `score.js`: Quantitative scoring model evaluating 40+ financial indicators across 6 core categories to output the 0–99ovr stock evaluation score. |
+| **Frontend Presentation** | Vercel | JavaScript (JSX), HTML5, CSS3 | • `main.jsx`: Core UI state management, rendering, search autocompletion.<br/>• `styles.css`: Responsive layout, custom styling, dynamic score badge color styling. |
+| **Backend API Gateway** | Render | Node.js Runtime, Express | • `server.js`: REST API routing, request validation, CORS management.<br/>• `index.js`: Main backend entry point & microservice orchestration. |
+| **Real-Time Streaming** | Render | Node.js, WebSockets | • `websock.js`: WebSocket communication layer for real-time client metric updates and live data feeds. |
+| **Scoring Algorithm** | Node.js Server | JavaScript | • `score.js`: Quantitative scoring model evaluating 40+ financial indicators across 6 core categories to output the 0–99ovr stock evaluation score. |
 | **Data & Caching Engine** | Supabase | SQL (PostgreSQL Architecture) | Database schema handling stored historical SEC metrics, third-party financial data source, indexing, and the 10-hour overnight batch ingestion script. |
-| **AI Intelligence** | Render / Node Runtime | JavaScript, OpenAI API | Prompt injection module passing pre-cached SQL tables to LLM models for hallucination-free user queries. |
+| **AI Intelligence** | Render & Node | JavaScript, OpenAI API | Prompt injection module passing pre-cached SQL tables to LLM models for hallucination-free user queries. |
 | **Project Setup & Environment** | Environment & Runtime | Node Package Manager | • `package.json`: Dependency manifests and execution scripts.<br/>• `.env`: Secure environment key configuration (API credentials, database strings). |
 
 ---
@@ -47,9 +47,9 @@
 | :--- | :--- | :--- |
 | **Stock Evaluation Engine** | **0–99 Score Dashboard** | • Real-time debounced ticker search across thousands of equities.<br/>• Color-coded health badges (*Critical*, *Neutral*, *Exceptional*).<br/>• Expandable accordion menus exposing underlying metrics per category. |
 | **Conversational Intelligence** | **"Ask Eval" AI Assistant** | • Natural language financial query interface powered by OpenAI API.<br/>• Contextual prompt injection pulling structured financial tables straight from local SQL cache.<br/>• Answers complex valuation & momentum prompts with zero hallucination. |
-| **Portfolio Health Analyzer** | **Batch CSV Parser** | • Upload raw trade execution logs (Buys, Sells, Execution Prices).<br/>• Calculates tax-lot accounting (realized/unrealized P&L).<br/>• Computes a capital-weighted **Composite Portfolio Health Score**.<br/>• Sector risk concentration & asset allocation breakdown. |
+| **Portfolio Health Analyzer** | **Batch .CSV Parser** | • Upload raw trade execution logs (Buys, Sells, Execution Prices).<br/>• Calculates tax-lot accounting (realized/unrealized P&L).<br/>• Computes a capital-weighted **Composite Portfolio Evaluation Score**.<br/>• Sector risk concentration & asset allocation breakdown. |
 | **Side-by-Side Equities** | **Stock Comparison Tool** | • Head-to-head comparison matrix for two or more target tickers.<br/>• Normalizes financial ratios across industry-specific peer benchmarks.<br/>• Highlights category win/loss differentials (e.g., Margin efficiency vs. Leverage). |
-| **Market Intelligence** | **News Sentiment Feed** | • Real-time financial headline ingestion & sentiment scoring.<br/>• Identifies institutional accumulation vs. retail distribution trends.<br/>• Correlates headline shifts with short-term price momentum. |
+| **Market Intelligence** | **News Sentiment** | • Real-time financial headline ingestion & sentiment scoring.<br/>• Identifies institutional accumulation vs. retail distribution trends.<br/>• Correlates headline shifts with short-term price momentum. |
 
 ---
 
