@@ -22,7 +22,7 @@
 * **Auto-Scaling Cloud System:** Frontend built with JSX and custom CSS hosted on the **Vercel** for sub-100ms global delivery; backend microservices running on **Render** powered by Node.js, Express, and WebSockets.
 * **Overnight Batching & 100x Scaling:** Features an automated backend ingestion engine that fetches data for **1 stock per minute over a 10-hour overnight window** (600 stocks/night). **Reduces third-party API costs by 99% while boosting platform throughput capacity from 5 concurrent users to thousands of simultaneous sessions.**
 * **Smart Delta Caching:** Retains unchanged fundamental statement data in a relational SQL database while overwriting updated metrics. Every tracked stock is guaranteed a complete refresh at least once per week.
-* **Conversational AI Assistant:** Integrates OpenAI API models directly with cached SQL relational tables to deliver context-aware, on-demand financial analysis without LLM hallucinations.
+* **Conversational AI Assistant:** Integrates OpenAI API models directly with cached SQL relational tables to deliver context-aware, on-demand financial analysis without LLM fabrications.
 * **.CSV Portfolio Engine:** Ingests raw brokerage trade execution logs to calculate realized/unrealized P&L alongside an overall capital-weighted portfolio health score.
 
 ---
