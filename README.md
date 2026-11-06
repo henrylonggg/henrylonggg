@@ -35,7 +35,7 @@
 | **Backend API Gateway** | Render Containers | Node.js Runtime, Express | • `server.js`: REST API routing, request validation, CORS management.<br/>• `index.js`: Main backend entry point & microservice orchestration. |
 | **Real-Time Streaming** | Render Containers | Node.js, WebSockets | • `websock.js`: WebSocket communication layer for real-time client metric updates and live data feeds. |
 | **Scoring Algorithm** | Node.js Server Runtime | JavaScript | • `score.js`: Quantitative scoring model evaluating 40 financial indicators across 5 core categories to output the 0–99 stock health score. |
-| **Data & Caching Engine** | Relational Database | SQL (PostgreSQL Architecture) | Custom relational database schema handling stored historical SEC metrics, indexing, and the 10-hour overnight batch ingestion script. |
+| **Data & Caching Engine** | Supabase | SQL (PostgreSQL Architecture) | Custom relational database schema handling stored historical SEC metrics, indexing, and the 10-hour overnight batch ingestion script. |
 | **AI Intelligence** | Render / Node Runtime | JavaScript, OpenAI API | Prompt injection module passing pre-cached SQL tables to LLM models for hallucination-free user queries. |
 | **Project Setup & Environment** | Environment & Runtime | Node Package Manager | • `package.json`: Dependency manifests and execution scripts.<br/>• `.env`: Secure environment key configuration (API credentials, database strings). |
 
