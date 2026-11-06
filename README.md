@@ -64,7 +64,7 @@ Connecting client UI searches directly to third-party financial APIs restricts s
                             │ Pulls 1 stock / minute (600 stocks / night)
                             │
               ┌─────────────┴─────────────┐
-              │  SQL DATABASE CACHE LAYER  │
+              │  SQL DATABASE CACHE LAYER │
               └─────────────┬─────────────┘
                             │
                             ├─► Unchanged Data: Retained & Cached
