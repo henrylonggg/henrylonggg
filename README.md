@@ -1,6 +1,6 @@
 <div align="center">
 
-# Joseph H. Long
+# Henry Long
 ### **B.S. MIS & Applied AI @ University of Delaware**
 
 <br/>
