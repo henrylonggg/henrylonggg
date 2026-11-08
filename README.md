@@ -56,9 +56,9 @@
 | :--- | :--- | :--- |
 | **Navigation & Header** | **Custom Nav Bar & Dropdowns** | • Dynamic navigation header with responsive dropdown menus.<br/>• Direct routing to platform tools, customizable user settings, **Support & Contact**, and legal **Terms & Conditions**. |
 | **User Identity & Security** | **Clerk Profile & Auth** | • Enterprise-grade user authentication and data encryption via **Clerk**.<br/>• Customizable user profiles, secure account settings, and protected session states. |
-| **Stock Evaluation Engine** | **0–99 Score Dashboard** | • Fast ticker search across thousands of stocks.<br/>• Color-coded badges: **Green** (Healthy), **Yellow** (Fine), **Red** (Unhealthy).<br/>• Quantitative 0–99 score based on weighted averages of 40+ metrics.<br/>• Dropdown accordions showing breakdowns for every metric. |
-| **AI Financial Assistant** | **"Ask Eval" Chat** | • Natural-language chat interface powered by OpenAI.<br/>• Queries local SQL tables for factual, zero-hallucination stock answers. |
-| **Portfolio Analyzer** | **CSV File Parser** | • Upload trade logs (Ticker, Buy/Sell action, Quantity, Purchase Price).<br/>• Computes tax-lot P&L and overall weighted portfolio score.<br/>• Visualizes sector concentration and asset breakdown. |
+| **Stock Evaluation Engine** | **0–99 Score Dashboard** | • Fast ticker search across thousands of stocks.<br/>• Color-coded badges: **Green** (Healthy), **Yellow** (Fine), **Red** (Unhealthy).<br/>• Quantitative 0–99 score based on weighted averages of 40+ metrics.<br/>• Dropdown menus showing breakdowns for every metric. |
+| **AI Financial Assistant** | **"Ask Eval" Chat** | • Natural-language chat interface powered by OpenAI.<br/>• Queries local SQL tables for factual, zero-fabrication stock answers. |
+| **Portfolio Analyzer** | **CSV File Parser** | • Upload trade logs (Ticker, Buy/Sell action, Quantity, Purchase Price).<br/>• Computes P&L and overall weighted portfolio score.<br/>• Visualizes sector concentration and asset breakdown. |
 | **Stock Comparison** | **Side-by-Side Matrix** | • Compare multiple stocks against industry peers.<br/>• Highlights key differences in profitability, debt, and valuation. |
 | **Market Intelligence** | **News Sentiment** | • Real-time market headline sentiment tracking.<br/>• Tracks buying vs. selling trends and price momentum updates. |
 
@@ -75,7 +75,8 @@ Calling external APIs on every search limits capacity to **~5 active users** bef
                             │ Fetches 1 stock / minute (600 stocks / night)
                             │
               ┌─────────────┴─────────────┐
-              │  SQL DATABASE CACHE LAYER │
+              │  SQL DATABASE CACHE LAYER |
+              │         (SUPABASE)        |
               └─────────────┬─────────────┘
                             │
                             ├─► Unchanged Data: Kept in database cache
