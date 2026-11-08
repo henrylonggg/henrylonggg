@@ -25,10 +25,10 @@
 **Eval** ([getstockeval.com](https://getstockeval.com)) is a full-stack financial analytics web app built with **Node.js, Express, React (JSX), SQL, and OpenAI**. Instead of making users comb through messy financial statements and noisy market news, **Eval** pulls raw market data and summarizes it into a clear **0–99 Stock Score** using 40+ key metrics.
 
 ### Key System Capabilities
-- **Fast Global Frontend:** Built with React (JSX) and host on **Vercel** for fast page loads worldwide under 100ms. Backend runs on **Render** using Express and WebSockets.
-- **Overnight Data Pipeline (100x Scale):** An automated background job fetches data for **1 stock per minute over 10 hours** (600 stocks/night). This **cuts third-party API costs by 99%** and scales support from 5 users to thousands at once.
-- **Smart Database Caching:** Stores financial data in a PostgreSQL database (Supabase), keeping existing numbers and updating changed metrics. Every stock gets updated at least once a week.
-- **Accurate AI Assistant:** Integrates OpenAI models directly with structured SQL tables, letting users ask natural language questions with zero hallucination.
+- **Fast Frontend:** Built with React (JSX) and host on **Vercel** for fast page loads worldwide under 100ms. Backend runs on **Render** using Express and WebSockets.
+- **Data Pipeline (100x Scale):** An automated background job fetches data for **1 stock per minute over 10 hours** (600 stocks/night). This **cuts third-party API costs by 99%** and scales support from 5 users to thousands at once.
+- **Database Caching:** Stores financial data in a PostgreSQL database (Supabase), keeping existing numbers and updating changed metrics. Every stock gets updated at least once a week.
+- **AI Assistant:** Integrates OpenAI models directly with structured SQL tables, letting users ask natural language questions with zero hallucination.
 - **CSV Portfolio Parser:** Lets users upload trade files to track profit/loss (realized/unrealized P&L) and calculate a total portfolio health score.
 
 ---
@@ -51,7 +51,7 @@
 
 | Feature Module | UI Element | System Capabilities |
 | :--- | :--- | :--- |
-| **Stock Evaluation Engine** | **0–99 Score Dashboard** | • Fast ticker search across thousands of stocks.<br/>• Color-coded badges: **Green** (Healthy), **Yellow** (Fine), **Red** (Unhealthy).<br/>• Quantitative 0–99 score based on weighted averages of 40+ metrics.<br/>• Dropdown accordions showing breakdowns for every metric. |
+| **Stock Evaluation Engine** | **0–99 Score Dashboard** | • Fast ticker search across thousands of stocks.<br/>• Color-coded values: **Green** (Healthy), **Yellow** (OK), **Red** (Unhealthy).<br/>• Quantitative 0–99 score based on weighted averages of 40+ metrics.<br/>• Dropdown accordions showing breakdowns for every metric. |
 | **AI Financial Assistant** | **"Ask Eval" Chat** | • Natural-language chat interface powered by OpenAI.<br/>• Queries local SQL tables for factual, zero-hallucination stock answers. |
 | **Portfolio Analyzer** | **CSV File Parser** | • Upload trade logs (Ticker, Buy/Sell action, Quantity, Purchase Price).<br/>• Computes tax-lot P&L and overall weighted portfolio score.<br/>• Visualizes sector concentration and asset breakdown. |
 | **Stock Comparison** | **Side-by-Side Matrix** | • Compare multiple stocks against industry peers.<br/>• Highlights key differences in profitability, debt, and valuation. |
