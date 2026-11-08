@@ -44,7 +44,7 @@
 | **Backend** | Render | Node.js, Express | • `server.js`: REST API routes, request validation, session checks, CORS management.<br/>• `index.js`: Backend entry point & service orchestration. |
 | **Real-Time Data** | Render | Node.js, WebSockets | • `websock.js`: WebSockets for real-time live metric updates. |
 | **Scoring** | Node.js Server | JavaScript | • `score.js`: Calculates the 0–99 score using weighted averages across 40+ metrics in 6 core categories. |
-| **Database & Cache** | Supabase | SQL (PostgreSQL) | Stores historical SEC metrics, user settings, schema setup, and runs the 10-hour overnight batch script. |
+| **Database & Cache** | Supabase | SQL (PostgreSQL) | Stores historical metrics, user settings, schema setup, and runs the 10-hour overnight batch script (third-party financial data source). |
 | **AI Integration** | Render & Node | JavaScript, OpenAI API | Injects structured SQL database tables directly into AI prompts to prevent hallucination. |
 | **Setup & Config** | Runtime | NPM | • `package.json`: Project dependencies and scripts.<br/>• `.env`: Secure credentials (Clerk keys, API credentials, database URIs). |
 
