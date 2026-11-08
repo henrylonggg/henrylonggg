@@ -51,9 +51,9 @@
 
 | Platform Module | Core UI Feature | Key Technical & Operational Capabilities |
 | :--- | :--- | :--- |
-| **Stock Evaluation Engine** | **0–99 Score Dashboard** | • Real-time debounced ticker search across thousands of equities.<br/>• Color-coded health badges (*Critical*, *Neutral*, *Exceptional*).<br/>• Expandable accordion menus exposing underlying metrics per category. |
+| **Stock Evaluation Engine** | **0–99 Score Dashboard** | • Real-time debounced ticker search across thousands of equities.<br/>• Color-coded health badges (**Green** = Healthy, **Yellow** = Fine, **Red** = Unhealthy).<br/>• Quantitative algorithm calculating a 0–99 score based on weighted averages of 40+ fundamental metrics.<br/>• Expandable accordion menus exposing underlying metrics per category. |
 | **Conversational Intelligence** | **"Ask Eval" AI Assistant** | • Natural language financial query interface powered by OpenAI API.<br/>• Contextual prompt injection pulling structured financial tables straight from local SQL cache.<br/>• Answers complex valuation & momentum prompts with zero hallucination. |
-| **Portfolio Health Analyzer** | **Batch .CSV Parser** | • Upload raw trade execution logs (Buys, Sells, Execution Prices).<br/>• Calculates tax-lot accounting (realized/unrealized P&L).<br/>• Computes a capital-weighted **Composite Portfolio Evaluation Score**.<br/>• Sector risk concentration & asset allocation breakdown. |
+| **Portfolio Health Analyzer** | **Batch .CSV Parser** | • Upload raw trade execution logs parsing equity ticker, transaction type (Buy/Sell), quantity, and purchase price.<br/>• Calculates tax-lot accounting (realized/unrealized P&L).<br/>• Computes a capital-weighted **Composite Portfolio Evaluation Score**.<br/>• Sector risk concentration & asset allocation breakdown. |
 | **Side-by-Side Equities** | **Stock Comparison Tool** | • Head-to-head comparison matrix for two or more target tickers.<br/>• Normalizes financial ratios across industry-specific peer benchmarks.<br/>• Highlights category win/loss differentials (e.g., Margin efficiency vs. Leverage). |
 | **Market Intelligence** | **News Sentiment** | • Real-time financial headline ingestion & sentiment scoring.<br/>• Identifies institutional accumulation vs. retail distribution trends.<br/>• Correlates headline shifts with short-term price momentum. |
 
