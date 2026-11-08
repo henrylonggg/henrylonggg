@@ -1,6 +1,6 @@
 <div align="center">
 
-# Henry Long
+# **Henry Long**
 ### **B.S. MIS & Applied AI @ University of Delaware**
 
 <br/>
@@ -19,63 +19,63 @@
 
 ---
 
-## Breakdown & Live Application Overview
+## Overview & Live Application
 
 ### What is **Eval**?
-**Eval** ([getstockeval.com](https://getstockeval.com)) is a full-stack financial analytics platform engineered using **JavaScript (Node.js, JSX), HTML5, CSS3, SQL, and OpenAI**. Instead of forcing users to analyze overwhelming financial statements, and noisy market feeds across multiple platforms, **Eval** ingests raw fundamental data from third-party financial data providers to generate a single, normalized **0–99 Stock Evaluation Score** across 40+ distinct metrics.
+**Eval** ([getstockeval.com](https://getstockeval.com)) is a full-stack financial analytics web app built with **Node.js, Express, React (JSX), SQL, and OpenAI**. Instead of making users comb through messy financial statements and noisy market news, **Eval** pulls raw market data and summarizes it into a clear **0–99 Stock Score** using 40+ key metrics.
 
-### Production System & Architectural Capabilities
-- **Auto-Scaling Cloud System:** Frontend built with JSX and custom CSS hosted on the **Vercel** for sub-100ms global delivery; backend microservices running on **Render** powered by Node.js, Express, and WebSockets.
-- **Overnight Batching & 100x Scaling:** Features an automated backend ingestion engine that fetches data for **1 stock per minute over a 10-hour overnight window** (600 stocks/night). **Reduces third-party API costs by 99% while boosting platform throughput capacity from 5 concurrent users to thousands of simultaneous sessions.**
-- **Smart Caching:** Retains unchanged fundamental statement data in a relational SQL database while overwriting updated metrics. Every tracked stock is guaranteed a complete refresh at least once per week.
-- **Conversational AI Assistant:** Integrates OpenAI API models directly with cached SQL relational tables to deliver context-aware, on-demand financial analysis without LLM fabrications.
-- **.CSV Portfolio Engine:** Ingests raw brokerage trade execution logs to calculate realized/unrealized P&L alongside an overall capital-weighted portfolio health score.
+### Key System Capabilities
+- **Fast Global Frontend:** Built with React (JSX) and host on **Vercel** for fast page loads worldwide under 100ms. Backend runs on **Render** using Express and WebSockets.
+- **Overnight Data Pipeline (100x Scale):** An automated background job fetches data for **1 stock per minute over 10 hours** (600 stocks/night). This **cuts third-party API costs by 99%** and scales support from 5 users to thousands at once.
+- **Smart Database Caching:** Stores financial data in a PostgreSQL database (Supabase), keeping existing numbers and updating changed metrics. Every stock gets updated at least once a week.
+- **Accurate AI Assistant:** Integrates OpenAI models directly with structured SQL tables, letting users ask natural language questions with zero hallucination.
+- **CSV Portfolio Parser:** Lets users upload trade files to track profit/loss (realized/unrealized P&L) and calculate a total portfolio health score.
 
 ---
 
 ## Codebase Architecture
 
-| Architectural Layer | Target Environment | Core Technology | File Modules & Responsibilities |
+| Layer | Environment | Tech Stack | Responsibilities |
 | :--- | :--- | :--- | :--- |
-| **Frontend Presentation** | Vercel | JavaScript (JSX), HTML5, CSS3 | • `main.jsx`: Core UI state management, rendering, search autocompletion.<br/>• `styles.css`: Responsive layout, custom styling, dynamic score badge color styling. |
-| **Backend API Gateway** | Render | Node.js Runtime, Express | • `server.js`: REST API routing, request validation, CORS management.<br/>• `index.js`: Main backend entry point & microservice orchestration. |
-| **Real-Time Streaming** | Render | Node.js, WebSockets | • `websock.js`: WebSocket communication layer for real-time client metric updates and live data feeds. |
-| **Scoring Algorithm** | Node.js Server | JavaScript | • `score.js`: Quantitative scoring model evaluating 40+ financial indicators across 6 core categories to output the 0–99ovr stock evaluation score. |
-| **Data & Caching Engine** | Supabase | SQL (PostgreSQL Architecture) | Database schema handling stored historical SEC metrics, third-party financial data source, indexing, and the 10-hour overnight batch ingestion script. |
-| **AI Intelligence** | Render & Node | JavaScript, OpenAI API | Prompt injection module passing pre-cached SQL tables to LLM models for hallucination-free user queries. |
-| **Project Setup & Environment** | Environment & Runtime | Node Package Manager | • `package.json`: Dependency manifests and execution scripts.<br/>• `.env`: Secure environment key configuration (API credentials, database strings). |
+| **Frontend UI** | Vercel | JavaScript (JSX), HTML5, CSS3 | • `main.jsx`: UI state management, page rendering, ticker search.<br/>• `styles.css`: Layout, responsive UI, score badge coloring. |
+| **Backend API** | Render | Node.js, Express | • `server.js`: REST API routes, input validation, CORS setup.<br/>• `index.js`: Main backend entry point & microservice runner. |
+| **Real-Time Data** | Render | Node.js, WebSockets | • `websock.js`: WebSockets for real-time live metric updates. |
+| **Scoring Engine** | Node.js Server | JavaScript | • `score.js`: Calculates the 0–99 score using weighted averages across 40+ metrics in 6 core categories. |
+| **Database & Cache** | Supabase | SQL (PostgreSQL) | Stores historical SEC data, indices, schema setup, and runs the 10-hour overnight batch script. |
+| **AI Integration** | Render & Node | JavaScript, OpenAI API | Injects structured SQL database tables directly into AI prompts to prevent hallucination. |
+| **Setup & Config** | Runtime | NPM | • `package.json`: Project dependencies and scripts.<br/>• `.env`: Secure credentials (API keys, database URIs). |
 
 ---
 
-## Comprehensive Platform Modules
+## Core Platform Features
 
-| Platform Module | Core UI Feature | Key Technical & Operational Capabilities |
+| Feature Module | UI Element | System Capabilities |
 | :--- | :--- | :--- |
-| **Stock Evaluation Engine** | **0–99 Score Dashboard** | • Real-time debounced ticker search across thousands of equities.<br/>• Color-coded health badges (**Green** = Healthy, **Yellow** = Fine, **Red** = Unhealthy).<br/>• Quantitative algorithm calculating a 0–99 score based on weighted averages of 40+ fundamental metrics.<br/>• Expandable accordion menus exposing underlying metrics per category. |
-| **Conversational Intelligence** | **"Ask Eval" AI Assistant** | • Natural language financial query interface powered by OpenAI API.<br/>• Contextual prompt injection pulling structured financial tables straight from local SQL cache.<br/>• Answers complex valuation & momentum prompts with zero hallucination. |
-| **Portfolio Health Analyzer** | **Batch .CSV Parser** | • Upload raw trade execution logs parsing equity ticker, transaction type (Buy/Sell), quantity, and purchase price.<br/>• Calculates tax-lot accounting (realized/unrealized P&L).<br/>• Computes a capital-weighted **Composite Portfolio Evaluation Score**.<br/>• Sector risk concentration & asset allocation breakdown. |
-| **Side-by-Side Equities** | **Stock Comparison Tool** | • Head-to-head comparison matrix for two or more target tickers.<br/>• Normalizes financial ratios across industry-specific peer benchmarks.<br/>• Highlights category win/loss differentials (e.g., Margin efficiency vs. Leverage). |
-| **Market Intelligence** | **News Sentiment** | • Real-time financial headline ingestion & sentiment scoring.<br/>• Identifies institutional accumulation vs. retail distribution trends.<br/>• Correlates headline shifts with short-term price momentum. |
+| **Stock Evaluation Engine** | **0–99 Score Dashboard** | • Fast ticker search across thousands of stocks.<br/>• Color-coded badges: **Green** (Healthy), **Yellow** (Fine), **Red** (Unhealthy).<br/>• Quantitative 0–99 score based on weighted averages of 40+ metrics.<br/>• Dropdown accordions showing breakdowns for every metric. |
+| **AI Financial Assistant** | **"Ask Eval" Chat** | • Natural-language chat interface powered by OpenAI.<br/>• Queries local SQL tables for factual, zero-hallucination stock answers. |
+| **Portfolio Analyzer** | **CSV File Parser** | • Upload trade logs (Ticker, Buy/Sell action, Quantity, Purchase Price).<br/>• Computes tax-lot P&L and overall weighted portfolio score.<br/>• Visualizes sector concentration and asset breakdown. |
+| **Stock Comparison** | **Side-by-Side Matrix** | • Compare multiple stocks against industry peers.<br/>• Highlights key differences in profitability, debt, and valuation. |
+| **Market Intelligence** | **News Sentiment** | • Real-time market headline sentiment tracking.<br/>• Tracks buying vs. selling trends and price momentum updates. |
 
 ---
 
-## Database Architecture & Throughput Scaling
+## Database Architecture & Scaling
 
-Connecting client UI searches directly to third-party financial APIs restricts system capacity to roughly **5 concurrent users** before hitting rate limits or high vendor costs. **Eval** bypasses this limitation with an offline batching caching layer:
+Calling external APIs on every search limits capacity to **~5 active users** before hitting strict rate limits. **Eval** solves this with an offline batching layer:
 
 ```text
                [ THIRDPARTY FINANCIAL API ]
                             │
-                            ▼ (Automated 10-Hour Overnight Batching Pipeline)
-                            │ Pulls 1 stock / minute (600 stocks / night)
+                            ▼ (Automated 10-Hour Overnight Pipeline)
+                            │ Fetches 1 stock / minute (600 stocks / night)
                             │
               ┌─────────────┴─────────────┐
               │  SQL DATABASE CACHE LAYER │
               └─────────────┬─────────────┘
                             │
-                            ├─► Unchanged Data: Retained & Cached
-                            ├─► Changed Metrics: Overwritten & Refreshed
-                            └─► Full Catalog: 100% Refreshed Min. 1x / Week (~3500 U.S stocks up-to-date scores every week)
+                            ├─► Unchanged Data: Kept in database cache
+                            ├─► Updated Data: Overwritten with fresh metrics
+                            └─► Full Library: 100% updated weekly (~3,500 stocks)
                             │
                             ▼ (Serves thousands of concurrent users instantly)
                      [ CLIENTS & UI ]
